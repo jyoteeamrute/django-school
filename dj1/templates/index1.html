@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+      
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    </head>
+    <body>
+        {% for i in clist %}
+         {% if i == "krish" %}
+                <li><strong>{{ i }}</strong></li>
+            {% else %}
+                <li>{{ i }}</li>
+            {% endif %}
+    {% endfor %}
+    
+    <table border="1">
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            
+        </tr>
+        {% for i in dlist %}
+        <tr>
+        <td>{{i.A}}</td>
+        <td>{{i.B}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+   
+        <script src="" async defer></script>
+    </body>
+</html>
